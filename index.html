@@ -8,24 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
     <link rel='stylesheet' href=style.css>
-    <title>Drag and drop</title>
+    <title>Desenho Canvas JS</title>
 
 </head>
 <body>
-    <div class="vazio">
-        <div class="fill" draggable="true"></div>  <!-- DRAGGABLE PARA ARRASTAR -->
-    </div>  
-    <div class="vazio"></div>
-    <div class="vazio"></div>
-    <div class="vazio"></div>
-    <div class="vazio"></div>
 
-
-   
     <footer>
         <p>Copyright 2021 - by Hugo Resende Products </p>
         <a class="copyR" href="https://hugoresende27.github.io/portfolio/" target="blank"> Portefolio </a> | <a class="copyR" href="https://www.linkedin.com/in/hugo-resende-781ab1111/" target="blank"> LinkedIn </a> | <a  class="copyR" href="https://github.com/hugoresende27" target="blank"> GitHub </a>
      </footer >
+
+    <canvas id="canvas" width="600" height="500" style="background: #fff;"></canvas>
+    <div class="toolbox">
+
+        <button id="decrease">-</button>
+        <span id="size">20</span>
+        <button id="increase">+</button>
+        <input type="color" id="color">
+        <button id="clear">X</button>
+
+    </div>
+
+
+   
+
 
 
    

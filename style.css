@@ -5,58 +5,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-:root
-{
-   --primary-cor:#fff;
-   --secondary-cor:#fff;
-}
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body
-{
-    background-image: linear-gradient(90deg, #616164, #384657);
-    /* background-color: rgb(16, 102, 231); */
-    font-family: 'Inconsolata',sans-serif;
-    font-weight: 900;
-    display: flex;          /*coloca tudo em linha*/
-   /* flex-direction: column; /*coloca tudo em coluna*/
-    align-items: center;    /*alinha horizontalmente*/
-    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
-    height: 100vh; 
-    overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
-    margin: 0;
-   /* overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
-   
+body {
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.vazio{
-    height: 150px;
-    width: 150px;
-    margin: 10px;
-    border: solid 3px black;
-    background: #fff;
+canvas {
+    border: 2px solid steelblue;
 }
 
-.fill{
-    background-image: url('https://source.unsplash.com/random/150x150');/*VAI BUSCAR UMA IMAGEM RANDOM, 150x150*/
-    height: 145px;
-    width: 145px;
+.toolbox{
+    background-color: steelblue;
+    border: 1px solid slateblue;
+    display: flex;
+    width: 604px;
+    padding: 1rem;
+}
+
+.toolbox >* { /* >* DIRECT CHILDREN */
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin: 0.25rem;
+    padding: 0.25rem;
     cursor: pointer;
-}
 
-.hold { /*EFEITO AO ARRASTAR NA CLASSE .hold*/
-    border: solid 5px #ccc;
 }
-.hovered {/*EFEITO QUANDO SELECCIONADO*/
-    background-color: #333;
-    border-color: #fff;
-    border-style: dashed;
+.toolbox >*:last-child{/*PARA O BOTAO X <button id="clear">X</button> IR PARA O LADO DIREITO*/
+    margin-left: auto;
 }
-
-
 
 
 
@@ -96,7 +90,7 @@ footer{
     text-align: center;
     /* border-top: 1px dashed; */
     position: absolute;
-    bottom: .5rem;
+    top: .5rem;
     transform: translate(-0%, -0%);
     
 }
